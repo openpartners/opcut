@@ -1,0 +1,24 @@
+<h1>Witamy</h1>
+
+<table>
+  <tr>
+    <th>Skrot:</th>
+    <th>Link:</th>
+
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @cut_links.each do |cut_link| %>
+  <tr>
+    <td style="background-color: #cccccc;"><strong><%= "http://" + request.env["HTTP_HOST"] + "/" %><%= cut_link.id %></strong></td>
+    <td><%= cut_link.link %></td>
+    <td><%= link_to 'Edycja', edit_cut_link_path(cut_link) %></td>
+    <td><%= link_to 'Usuń', cut_link, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Cut link', new_cut_link_path %>

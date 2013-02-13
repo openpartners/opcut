@@ -7,6 +7,7 @@ module ApplicationHelper
       "#{@title}"
     end
   end
+
   def kod
     x_kod = "Bez koda"
     if @kod.nil?
@@ -15,4 +16,16 @@ module ApplicationHelper
       "#{@kod}"
     end
   end
+
+  # Returns the complete URL used for this request.
+  def adres
+    x_adres = "Bez adresu"
+      if @adres.nil?
+        x_adres
+      else
+        "#{@adres}"
+      end
+  end
+
+
 end

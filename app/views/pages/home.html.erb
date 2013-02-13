@@ -1,4 +1,7 @@
-<h1>Witamy</h1>
-<p>Twoj 8 znaczny skrot to <strong> <%= kod %> </strong> </p>
+<h1>Witamy w drugim sposobie obcinania URL</h1>
+<p>Twoj skrot to <strong> <%= "http://" + request.env["HTTP_HOST"] + "/" + kod %> </strong> </p>
+<p>jesli uwazasz ze jest nie ladny nacisnij F5</p>
+<p> w przeciwnym wypadku wpisz gdzie ma on kierowac</p>
+<%= request.env["HTTP_REFERER"] %>
 
 

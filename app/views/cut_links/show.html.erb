@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Link:</b>
+  <%= @cut_link.link %>
+</p>
+
+<p>
+  <b>Cut:</b>
+  <%= @cut_link.cut %>
+</p>
+
+
+<%= link_to 'Edit', edit_cut_link_path(@cut_link) %> |
+<%= link_to 'Back', cut_links_path %>
